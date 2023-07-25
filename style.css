@@ -75,6 +75,7 @@ section {
   display: flex;
   align-items: center;
   padding: 0 10%;
+  background: url("");
 }
 
 .home-content {
@@ -163,4 +164,134 @@ section {
 
 .btn-box .btn:hover::before {
   width: 100%;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 4rem;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home-sci a:hover {
+  color: var(--bg-color);
+}
+
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  transform: 0.5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+/* .home-imgHover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: transparent;
+  border: 2px solit gold;
+} */
+
+/* .home-imgHover:hover {
+  background: var(--bg-color);
+  opacity: 0.8;
+} */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--second-bg-color);
+  padding-bottom: 6rem;
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.about-img {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 50%;
+  border-radius: 50%;
+  border: 0.2rem solid var(--main-color);
+}
+
+.about-img .circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border-top: 0.2rem solid var(--second-bg-color);
+  border-bottom: 0.02rem solid var(--second-bg-color);
+  border-left: 0.2rem solid var(--main-color);
+  border-right: 0.2rem solid var(--main-color);
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+}
+
+.btn-box.btns {
+  display: inline-block;
+  width: 15rem;
+}
+
+.btn-box.btns a::before {
+  background: var(--second-bg-color);
 }
