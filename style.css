@@ -40,6 +40,10 @@ header {
   align-items: center;
 }
 
+.header.sticky {
+  background: red;
+}
+
 .logo {
   font-size: 2rem;
   color: var(--text-color);
