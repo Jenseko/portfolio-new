@@ -19,7 +19,7 @@
 }
 
 html {
-  font-size: 1rem;
+  font-size: 0.75rem;
   overflow-x: hidden;
 }
 
@@ -38,6 +38,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
+  transition: 0.3s;
 }
 
 .header.sticky {
@@ -45,13 +47,13 @@ header {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 600;
 }
 
 .navbar a {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: var(--text-color);
   font-weight: 500;
   margin-left: 2rem;
