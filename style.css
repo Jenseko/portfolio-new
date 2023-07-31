@@ -19,7 +19,7 @@
 }
 
 html {
-  font-size: 0.75rem;
+  font-size: 1rem;
   overflow-x: hidden;
 }
 
@@ -42,7 +42,7 @@ header {
   transition: 0.3s;
 }
 
-.header.sticky {
+.header .sticky {
   background: red;
 }
 
@@ -231,6 +231,8 @@ section {
   opacity: 0.8;
 } */
 
+/* --- About Me --- */
+
 .about {
   display: flex;
   justify-content: center;
@@ -302,6 +304,8 @@ span {
   background: var(--second-bg-color);
 }
 
+/* --- education --- */
+
 .education {
   display: flex;
   justify-content: center;
@@ -364,7 +368,7 @@ span {
   height: 100%;
   background: var(--second-bg-color);
   z-index: -1;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .education-content .content:hover::before {
@@ -378,7 +382,7 @@ span {
 }
 
 .education-content .content .year i {
-  padding-right: 0.5rem;
+  padding-right: 1.5rem;
 }
 
 .education-content .content h3 {
@@ -389,6 +393,8 @@ span {
   font-size: 1.6rem;
   padding-top: 0.5rem;
 }
+
+/* --- Skills --- */
 
 .skills {
   min-height: auto;
@@ -501,6 +507,8 @@ span {
   width: 90%;
 }
 
+/* --- Contact --- */
+
 .contact {
   min-height: auto;
   padding-bottom: 7rem;
@@ -570,6 +578,8 @@ span {
 .contact form .textarea-field textarea {
   resize: none;
 }
+
+/* --- Footer --- */
 
 .footer {
   display: flex;
