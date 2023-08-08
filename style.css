@@ -35,14 +35,15 @@ header {
   left: 0;
   width: 100%;
   padding: 2rem 9%;
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
   transition: 0.3s;
 }
 
-.header .sticky {
+.header.sticky {
   background: var(--bg-color);
 }
 
@@ -220,12 +221,12 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: transparent;
   border: 0.2rem solid var(--main-color);
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 30px;
   color: var(--main-color);
   z-index: 1;
   overflow: hidden;
@@ -245,7 +246,7 @@ section {
   height: 100%;
   background: var(--main-color);
   z-index: -1;
-  transform: 0.5s;
+  transition: 0.5s;
 }
 
 .home-sci a:hover::before {
@@ -286,7 +287,10 @@ section {
   text-align: center;
 }
 
-.about span {
+.about span,
+.education span,
+.skills span,
+.contact span {
   color: var(--main-color);
 }
 
@@ -301,7 +305,7 @@ section {
 }
 
 .about-img img {
-  width: 50%;
+  width: 90%;
   border-radius: 50%;
   border: 0.2rem solid var(--main-color);
 }
@@ -311,8 +315,8 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0);
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border-top: 0.2rem solid var(--second-bg-color);
   border-bottom: 0.02rem solid var(--second-bg-color);
@@ -334,6 +338,7 @@ section {
 .about-content p {
   position: relative;
   font-size: 1.6rem;
+  margin: 2rem 0 3rem;
 }
 
 .btn-box.btns {
@@ -426,7 +431,7 @@ section {
 }
 
 .education-content .content .year i {
-  padding-right: 1.5rem;
+  padding-right: 0.5rem;
 }
 
 .education-content .content h3 {
@@ -712,11 +717,11 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: gold;
+  background: var(--bg-color);
   z-index: 98;
 }
 
-.animate .home-img {
+.animate.home-img {
   width: 50%;
 }
 
@@ -732,6 +737,10 @@ section {
   transition: 1s ease;
   transition-delay: calc(0.3s / var(--i));
   animation: none;
+}
+
+section:nth-child(odd) .animate.scroll {
+  background: var(--second-bg-color);
 }
 
 .education .education-box .animate.scroll {
@@ -793,5 +802,95 @@ section {
 @keyframes showRight {
   100% {
     width: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem 4%;
+  }
+
+  section {
+    padding: 10rem 4% 2rem;
+  }
+
+  .home {
+    padding: 0 4%;
+  }
+
+  .footer {
+    padding: 2rem 4%;
+  }
+}
+
+@media (max-width: 850px) {
+  .animate.home-img {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: var(--bg-color);
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    padding: 1rem 4%;
+    background: var(--main-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: 0.25s ease;
+    transition-delay: 0.25s;
+  }
+
+  .navbar.active {
+    left: 0;
+    transition-delay: 0s;
+  }
+
+  .navbar .active-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    z-index: -1;
+    transition: 0.25s ease;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    transform: translateX(-20rem);
+    transition: 0.25s ease;
+    transition-delay: 0s;
+  }
+
+  .navbar .active a {
+    transform: translateX(0);
+    transition-delay: 0.25s;
+  }
+
+  .home-imgHover {
+    pointer-events: none;
+    background: var(--bg-color);
+    opacity: 0.6;
   }
 }
