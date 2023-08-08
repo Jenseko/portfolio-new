@@ -51,7 +51,7 @@ navbar.classList.remove("active");
 // animation on footer on scroll
 let footer = document.querySelector("footer");
 
-footer.classList.toogle(
+footer.classList.toggle(
   "show-animate",
   this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight
 );

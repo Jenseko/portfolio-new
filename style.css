@@ -21,7 +21,8 @@
 html {
   font-size: 1rem;
   overflow-x: hidden;
-  /* max-width: 1200px; */
+  max-width: 1678px;
+  max-height: 100vh;
 }
 
 body {
@@ -819,7 +820,7 @@ section:nth-child(odd) .animate.scroll {
 
 @media (max-width: 991px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
 
   header {
@@ -911,5 +912,33 @@ section:nth-child(odd) .animate.scroll {
     pointer-events: none;
     background: var(--bg-color);
     opacity: 0.6;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 70%;
+    text-align: center;
+  }
+
+  section {
+    min-height: 140rem;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-sci {
+    width: 160px;
+  }
+
+  .home-sci a {
+    width: 50px;
+    height: 50px;
   }
 }
