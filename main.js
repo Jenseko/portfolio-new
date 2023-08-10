@@ -1,3 +1,8 @@
+console.log("it works");
+// ======================================
+
+import nodeMailer from ('./n')
+
 // toggle icon navbar
 
 let menuIcon = document.querySelector("#menu-icon");
@@ -28,6 +33,7 @@ window.onscroll = () => {
           .querySelector("header nav a[href*=" + id + "]")
           .classList.add("active");
       });
+
       // active sections for animation on scroll
       sec.classList.add("show-animate");
     }
@@ -55,3 +61,16 @@ footer.classList.toggle(
   "show-animate",
   this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight
 );
+
+// // --- SEND EMAIL ---
+
+// const fullname = document.querySelector(".full-name").value;
+// const email = document.querySelector(".email-adress").value;
+// const phone = document.querySelector(".phone-number").value;
+// const subject = document.querySelector(".mail-subject").value;
+// const message = document.querySelector(".message").value;
+
+// console.log({ fullname, email, phone, subject, message });
+
+// // -----------------------------
+

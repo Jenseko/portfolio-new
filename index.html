@@ -53,7 +53,7 @@
         </p>
         <div class="btn-box">
           <a href="#" class="btn">hire me</a>
-          <a href="#" class="btn">let's talk</a>
+          <a href="#contact" class="btn">let's talk</a>
           <span class="animate" style="--i: 5"></span>
         </div>
       </div>
@@ -301,14 +301,24 @@
         ><span class="animate scroll" style="--i: 1"></span>
       </h2>
 
-      <form action="#">
+      <form onsubmit="return false">
         <div class="input-box">
           <div class="input-field">
-            <input type="text" placeholder="Full Name" required />
+            <input
+              type="text"
+              class="full-name"
+              placeholder="Full Name"
+              required
+            />
             <span class="focus"></span>
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Email Adress" required />
+            <input
+              type="text"
+              class="mail-adress"
+              placeholder="Email Adress"
+              required
+            />
             <span class="focus"></span>
           </div>
 
@@ -317,11 +327,21 @@
 
         <div class="input-box">
           <div class="input-field">
-            <input type="number" placeholder="Mobile Number" required />
+            <input
+              type="number"
+              class="phone-number"
+              placeholder="Mobile Number"
+              required
+            />
             <span class="focus"></span>
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Email Subject" required />
+            <input
+              type="text"
+              class="mail-subject"
+              placeholder="Subject"
+              required
+            />
             <span class="focus"></span>
           </div>
 
@@ -330,6 +350,7 @@
 
         <div class="textarea-field">
           <textarea
+            class="message"
             name=""
             cols="30"
             rows="10"
