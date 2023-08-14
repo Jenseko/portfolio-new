@@ -1,8 +1,6 @@
 console.log("it works");
 // ======================================
 
-import nodeMailer from ('./n')
-
 // toggle icon navbar
 
 let menuIcon = document.querySelector("#menu-icon");
@@ -73,4 +71,3 @@ footer.classList.toggle(
 // console.log({ fullname, email, phone, subject, message });
 
 // // -----------------------------
-
