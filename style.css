@@ -90,6 +90,7 @@ header {
 section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
+  background: transparent;
 }
 
 .home {
@@ -219,7 +220,7 @@ section {
 .home-sci {
   position: absolute;
   bottom: 4rem;
-  width: 170px;
+  width: 220px;
   display: flex;
   justify-content: space-between;
 }
@@ -229,12 +230,12 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: transparent;
   border: 0.2rem solid var(--main-color);
   border-radius: 50%;
-  font-size: 30px;
+  font-size: 40px;
   color: var(--main-color);
   z-index: 1;
   overflow: hidden;
@@ -646,6 +647,7 @@ section {
 .contact form .textarea-field textarea:focus ~ .focus,
 .contact form .textarea-field textarea:valid ~ .focus {
   width: 100%;
+  /* background-color: transparent; */
 }
 
 .contact form .textarea-field {
@@ -819,15 +821,23 @@ section:nth-child(odd) .animate.scroll {
 
 /* --- MEDIA QUERIES --- */
 
-@media (max-width: 1200px) {
-  /* html {
+@media (max-width: 1202px) {
+  html {
     font-size: 100%;
-  } */
+  }
+  .home-sci {
+    width: 220px;
+  }
+  .home-sci a {
+    width: 60px;
+    height: 60px;
+    font-size: 45px;
+  }
 }
 
 @media (max-width: 991px) {
   html {
-    font-size: 90%;
+    font-size: 95%;
   }
 
   header {
@@ -849,7 +859,7 @@ section:nth-child(odd) .animate.scroll {
 
 @media (max-width: 850px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
 
   .animate.home-img {
@@ -924,12 +934,17 @@ section:nth-child(odd) .animate.scroll {
 
 @media (max-width: 520px) {
   html {
-    font-size: 70%;
+    font-size: 82%;
     text-align: center;
   }
 
   section {
-    min-height: 140rem;
+    min-height: 120rem;
+    padding: 10rem 9% 2rem;
+  }
+
+  .heading {
+    text-align: center;
   }
 
   .home-content {
@@ -941,7 +956,8 @@ section:nth-child(odd) .animate.scroll {
   }
 
   .home-sci {
-    width: 160px;
+    width: 200px;
+    transform: translateX(70%);
   }
 
   .home-sci a {
