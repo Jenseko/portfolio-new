@@ -18,10 +18,17 @@
   --main-color: #00abf0;
 }
 
+/* :root {
+  --bg-color: #272727;
+  --second-bg-color: #2e2e2e;
+  --text-color: #ededed;
+  --main-color: #e1bb12;
+} */
+
 html {
   font-size: 1rem;
   overflow-x: hidden;
-  max-width: 1678px;
+  max-width: 1200px;
   max-height: 100vh;
 }
 
@@ -701,7 +708,7 @@ section {
 }
 
 .footer-iconTop a:hover::before {
-  width: 100%;
+  width: 0;
 }
 
 .footer-iconTop a i {
