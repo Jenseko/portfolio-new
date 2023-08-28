@@ -25,8 +25,8 @@ window.onscroll = () => {
 
     if (top >= offset && top < offset + height) {
       // active navbar links
-      navLinks.forEach((links) => {
-        links.classList.remove("active");
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
         document
           .querySelector("header nav a[href*=" + id + "]")
           .classList.add("active");
@@ -43,31 +43,21 @@ window.onscroll = () => {
 
   // sticky header
   let header = document.querySelector("header");
-
   header.classList.toggle("sticky", window.scrollY > 100);
 };
 
 // remove toggle icon and navbar when click navbar links (scroll)
-
-menuIcon.classList.remove("bx-x");
-navbar.classList.remove("active");
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuIcon.classList.remove("bx-x");
+    navbar.classList.remove("active");
+  });
+});
 
 // animation on footer on scroll
 let footer = document.querySelector("footer");
 
 footer.classList.toggle(
   "show-animate",
-  this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight
+  window.innerHeight + window.scrollY >= document.scrollingElement.scrollHeight
 );
-
-// // --- SEND EMAIL ---
-
-// const fullname = document.querySelector(".full-name").value;
-// const email = document.querySelector(".email-adress").value;
-// const phone = document.querySelector(".phone-number").value;
-// const subject = document.querySelector(".mail-subject").value;
-// const message = document.querySelector(".message").value;
-
-// console.log({ fullname, email, phone, subject, message });
-
-// // -----------------------------
