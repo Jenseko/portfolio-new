@@ -57,7 +57,10 @@ navLinks.forEach((link) => {
 // animation on footer on scroll
 let footer = document.querySelector("footer");
 
-footer.classList.toggle(
-  "show-animate",
-  window.innerHeight + window.scrollY >= document.scrollingElement.scrollHeight
-);
+window.addEventListener("scroll", () => {
+  footer.classList.toggle(
+    "show-animate",
+    window.innerHeight + window.scrollY >=
+      document.scrollingElement.scrollHeight
+  );
+});

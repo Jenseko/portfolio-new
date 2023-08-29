@@ -859,6 +859,40 @@ footer .animate.scroll {
 
 /* --- MEDIA QUERIES --- */
 
+@media (max-width: 1995px) {
+  html {
+    font-size: 75%;
+    max-width: 1995px;
+  }
+  section {
+    min-height: 100vh;
+    padding: 4rem 9% 2rem;
+  }
+  header {
+    padding: 2rem 5.5%;
+  }
+
+  .navbar a {
+    font-size: 1.7rem;
+    margin-left: 7rem;
+  }
+
+  .home-sci {
+    width: 410px;
+    top: 59.5rem;
+  }
+  .about-img {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: 0.2rem solid var(--main-color);
+  }
+}
+
 @media (max-width: 1202px) {
   html {
     font-size: 75%;
