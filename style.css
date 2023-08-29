@@ -49,7 +49,7 @@
 html {
   font-size: 1rem;
   overflow-x: hidden;
-  max-width: 1200px;
+  max-width: 1995px;
 }
 
 body {
@@ -607,6 +607,64 @@ section {
   width: 70%;
 }
 
+/* Projects */
+
+.projects {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-card {
+  width: 30%;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+
+.project-card .title {
+  font-size: 2rem;
+}
+
+.project-card .info {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.project-card img {
+  height: 50rem;
+  border-radius: 0.8rem;
+  display: inline-block;
+  margin: 1rem 5%;
+}
+
+.project-card .gh-link {
+  left: 25%;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  padding: 0.5em;
+  border-radius: 0.8rem;
+  display: inline-flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  position: relative;
+  justify-content: center;
+  width: 15rem;
+  color: var(--bg-color);
+  text-transform: capitalize;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.project-card .gh-link:hover {
+  color: var(--second-bg-color);
+  background: transparent;
+}
+
 /* --- Contact --- */
 
 .contact {
@@ -662,7 +720,7 @@ section {
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--second-bg-color);
+  background: transparent;
   border-radius: 0.6rem;
   z-index: -1;
   transition: 0.5s;
@@ -673,7 +731,7 @@ section {
 .contact form .textarea-field textarea:focus ~ .focus,
 .contact form .textarea-field textarea:valid ~ .focus {
   width: 100%;
-  background-color: transparent;
+  background-color: var(--second-bg-color);
 }
 
 .contact form .textarea-field {
