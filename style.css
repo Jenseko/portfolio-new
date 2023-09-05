@@ -331,18 +331,19 @@ section {
 
 .about-img {
   position: relative;
-  width: 25rem;
-  height: 25rem;
-  border-radius: 50%;
+  width: 20rem;
+  /* border-radius: 50%; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .about-img img {
-  width: 90%;
-  border-radius: 50%;
-  border: 0.2rem solid var(--main-color);
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50rem;
+  /* border: 0.2rem solid var(--main-color); */
+  filter: grayscale();
 }
 
 .about-img .circle-spin {
@@ -350,8 +351,8 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0);
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   border-radius: 50%;
   border-top: 0.2rem solid var(--second-bg-color);
   border-bottom: 0.02rem solid var(--second-bg-color);
