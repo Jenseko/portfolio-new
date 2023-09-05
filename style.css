@@ -618,6 +618,9 @@ section {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .project-card {
@@ -626,9 +629,6 @@ section {
   border-radius: 0.8rem;
   padding: 1rem;
   margin-block: 2rem;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
 }
 
 .project-card::before {
@@ -688,6 +688,12 @@ section {
   z-index: 1;
   overflow: hidden;
   transition: 0.5s;
+}
+
+.gh-link i {
+  height: 15%;
+  width: 15%;
+  font-size: 1.5rem;
 }
 
 .project-card .gh-link:hover {
