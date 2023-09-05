@@ -628,7 +628,7 @@ section {
   margin-block: 2rem;
   position: relative;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
 .project-card::before {
@@ -639,7 +639,7 @@ section {
   width: 0;
   height: 100%;
   background: var(--bg-color);
-  z-index: 0;
+  z-index: -1;
   transition: 0.5s;
 }
 
@@ -691,7 +691,7 @@ section {
 }
 
 .project-card .gh-link:hover {
-  color: var(--second-bg-color);
+  color: var(--text-color);
   background: transparent;
 }
 
