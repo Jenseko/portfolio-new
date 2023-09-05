@@ -11,12 +11,12 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* :root {
+:root {
   --bg-color: #081b29;
   --second-bg-color: #112e42;
   --text-color: #ededed;
   --main-color: #00abf0;
-} */
+}
 
 /* :root {
   --bg-color: #73607d;
@@ -39,18 +39,18 @@
   --main-color: #b4c540;
 } */
 
-:root {
+/* :root {
   --bg-color: #332851;
   --second-bg-color: #1c162e;
   --main-color: #ca3074;
   --text-color: #f6c667;
-}
+} */
 
-html {
+/* html {
   font-size: 1rem;
   overflow-x: hidden;
   max-width: 1995px;
-}
+} */
 
 body {
   background: var(--bg-color);
@@ -861,6 +861,7 @@ footer .animate.scroll {
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
+.projects.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
   transition-delay: calc(0.3s * var(--i));
