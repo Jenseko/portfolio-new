@@ -1,20 +1,22 @@
-console.log("it works");
+"use strict";
+
 // ======================================
 
-// toggle icon navbar
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("header nav a");
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
 
-let menuIcon = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
+// toggle icon navbar ////////////////////////////
 
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
 
-// scroll sections
-
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
+// scroll sections ///////////////////////////////
 
 window.onscroll = () => {
   sections.forEach((sec) => {
@@ -42,22 +44,21 @@ window.onscroll = () => {
   });
 
   // sticky header
-  let header = document.querySelector("header");
+
   header.classList.toggle("sticky", window.scrollY > 100);
 };
 
 // remove toggle icon and navbar when click navbar links (scroll)
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", function () {
     menuIcon.classList.remove("bx-x");
     navbar.classList.remove("active");
   });
 });
 
 // animation on footer on scroll
-let footer = document.querySelector("footer");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", function () {
   footer.classList.toggle(
     "show-animate",
     window.innerHeight + window.scrollY >=
