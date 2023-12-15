@@ -3,35 +3,36 @@
 // ======================================
 
 const menuIcon = document.querySelector("#menu-icon");
+const header = document.querySelector(".header");
 const navbar = document.querySelector(".navbar");
-const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
-const header = document.querySelector("header");
+const sections = document.querySelectorAll("section");
 const footer = document.querySelector("footer");
 
 // toggle icon navbar ////////////////////////////
 
-menuIcon.onclick = () => {
+menuIcon.addEventListener("click", function () {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
-};
+});
 
 // scroll sections ///////////////////////////////
 
 window.onscroll = () => {
   sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 100;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 100;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
       // active navbar links
       navLinks.forEach((link) => {
         link.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
+
+        if (link.getAttribute("href") === "#" + id) {
+          link.classList.add("active");
+        }
       });
 
       // active sections for animation on scroll
@@ -58,7 +59,7 @@ navLinks.forEach((link) => {
 
 // animation on footer on scroll
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   footer.classList.toggle(
     "show-animate",
     window.innerHeight + window.scrollY >=

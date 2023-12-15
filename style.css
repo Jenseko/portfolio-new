@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
 
 * {
   margin: 0;
@@ -10,6 +13,8 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
+
+/* Designs */
 
 /* :root {
   --bg-color: #081b29;
@@ -111,7 +116,6 @@ section {
   display: flex;
   align-items: center;
   padding: 0 9%;
-  background: url("");
 }
 
 .home-content {
